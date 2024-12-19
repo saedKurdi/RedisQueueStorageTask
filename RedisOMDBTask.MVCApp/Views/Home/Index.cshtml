@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Movie Posters Gallery</h1>
+    <p>Discover posters fetched dynamically from Redis every 3 seconds.</p>
+</div>
+
+<div id="moviePosters" class="d-flex flex-wrap justify-content-center mt-4">
+    <!-- Images will be dynamically loaded here -->
+</div>
+
+<script>
+    // Function to fetch movie posters from the server
+    async function fetchAndDisplayPosters() {
+        try {
+            const response = await fetch('/Home/GetMoviePosters');
+            if (response.ok) {
+                const posters = await response.json();
+                const container = document.getElementById('moviePosters');
+                container.innerHTML = ''; // Clear existing images
+
+                // Add each poster to the container
+                posters.forEach(url => {
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'Movie Poster';
+                    img.className = 'm-2';
+                    img.style.width = '200px';
+                    img.style.height = '300px';
+                    img.style.objectFit = 'cover';
+                    img.style.borderRadius = '8px';
+                    container.appendChild(img);
+                });
+            } else {
+                console.error('Failed to fetch movie posters.');
+            }
+        } catch (error) {
+            console.error('Error fetching posters:', error);
+        }
+    }
+
+    // Fetch posters every 3 seconds
+    setInterval(fetchAndDisplayPosters, 3000);
+
+    // Initial fetch
+    fetchAndDisplayPosters();
+</script>
+
+<style>
+    #moviePosters img {
+        border: 1px solid #ddd;
+        transition: transform 0.3s;
+    }
+
+    #moviePosters img:hover {
+        transform: scale(1.1);
+    }
+</style>

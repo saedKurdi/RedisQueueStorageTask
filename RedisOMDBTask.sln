@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueTriggerApp", "QueueTriggerApp\QueueTriggerApp.csproj", "{4D7F995A-65A5-49F6-A380-96B4336C3F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisOMDBTask.ConsoleApp", "RedisOMDBTask.ConsoleApp\RedisOMDBTask.ConsoleApp.csproj", "{474D22ED-E2DF-48FD-8E66-BB50F91609A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisOMDBTask.MVCApp", "RedisOMDBTask.MVCApp\RedisOMDBTask.MVCApp.csproj", "{021EFA50-44E0-41DB-873C-6F6A63530FDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D7F995A-65A5-49F6-A380-96B4336C3F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7F995A-65A5-49F6-A380-96B4336C3F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7F995A-65A5-49F6-A380-96B4336C3F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7F995A-65A5-49F6-A380-96B4336C3F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474D22ED-E2DF-48FD-8E66-BB50F91609A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474D22ED-E2DF-48FD-8E66-BB50F91609A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474D22ED-E2DF-48FD-8E66-BB50F91609A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474D22ED-E2DF-48FD-8E66-BB50F91609A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021EFA50-44E0-41DB-873C-6F6A63530FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021EFA50-44E0-41DB-873C-6F6A63530FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021EFA50-44E0-41DB-873C-6F6A63530FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021EFA50-44E0-41DB-873C-6F6A63530FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65267CAD-F0DF-455E-897B-0BAFA4596800}
+	EndGlobalSection
+EndGlobal
